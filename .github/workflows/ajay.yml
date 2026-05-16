@@ -24,6 +24,13 @@ experiences:
     terrforms: 0.6
 
 experiences:
+  - devops:
+      linux: 2
+      docker: 2
+  - backend:
+      java: 3
+
+experiences:
   devops: {linux: 2, docker: 2, kubernetes: 1.5, git: 3, github: 3, terrforms: 0.6}    
 
   
