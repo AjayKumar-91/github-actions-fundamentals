@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ajay Kumar | Portfolio</title>
+<title>Ajay Kumar | DevOps Portfolio</title>
 
 <style>
-
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial, Helvetica, sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -21,13 +21,15 @@ line-height:1.6;
 }
 
 /* Navbar */
-
 nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 80px;
 background:#020617;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav h1{
@@ -37,26 +39,28 @@ color:#38bdf8;
 nav ul{
 display:flex;
 list-style:none;
-gap:30px;
+gap:25px;
 }
 
 nav a{
 text-decoration:none;
 color:white;
 font-weight:bold;
+transition:0.3s;
 }
 
 nav a:hover{
 color:#38bdf8;
 }
 
-/* Hero Section */
-
+/* Hero */
 .hero{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:80px;
+flex-wrap:wrap;
+gap:40px;
 }
 
 .hero-text{
@@ -64,8 +68,7 @@ max-width:500px;
 }
 
 .hero-text h2{
-font-size:40px;
-margin-bottom:10px;
+font-size:42px;
 }
 
 .hero-text span{
@@ -85,66 +88,51 @@ color:black;
 text-decoration:none;
 border-radius:6px;
 font-weight:bold;
+transition:0.3s;
 }
 
-/* About */
+.btn:hover{
+background:#0ea5e9;
+transform:scale(1.05);
+}
 
-.about{
+/* Sections */
+section{
 padding:80px;
-background:#020617;
 text-align:center;
 }
 
-.about h2{
-margin-bottom:20px;
-font-size:32px;
-color:#38bdf8;
+.about, .projects{
+background:#020617;
 }
 
-.about p{
-max-width:700px;
-margin:auto;
-color:#cbd5f5;
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+font-size:32px;
 }
 
 /* Skills */
-
-.skills{
-padding:80px;
-text-align:center;
-}
-
-.skills h2{
-margin-bottom:40px;
-color:#38bdf8;
-}
-
 .skill-box{
 display:flex;
 justify-content:center;
-gap:30px;
+gap:20px;
 flex-wrap:wrap;
+margin-top:30px;
 }
 
 .skill{
 background:#020617;
-padding:25px;
+padding:20px;
 border-radius:10px;
-width:150px;
+width:140px;
 }
 
 /* Projects */
-
-.projects{
-padding:80px;
-background:#020617;
-text-align:center;
-}
-
 .project-grid{
 display:flex;
 justify-content:center;
-gap:30px;
+gap:20px;
 flex-wrap:wrap;
 margin-top:30px;
 }
@@ -153,21 +141,17 @@ margin-top:30px;
 background:#0f172a;
 padding:20px;
 border-radius:10px;
-width:250px;
+width:260px;
+border:1px solid #1e293b;
 }
 
 /* Contact */
-
-.contact{
-padding:80px;
-text-align:center;
-}
-
-.contact h2{
+.contact a{
 color:#38bdf8;
-margin-bottom:20px;
+text-decoration:none;
 }
 
+/* Footer */
 footer{
 text-align:center;
 padding:20px;
@@ -175,42 +159,51 @@ background:#020617;
 margin-top:40px;
 }
 
-</style>
+/* Responsive */
+@media(max-width:768px){
+nav{
+flex-direction:column;
+gap:10px;
+}
 
+.hero{
+padding:40px;
+text-align:center;
+}
+
+section{
+padding:50px 20px;
+}
+}
+</style>
 </head>
 
 <body>
 
 <!-- Navbar -->
-
 <nav>
 <h1>Ajay</h1>
-
 <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Skills</a></li>
-<li><a href="#">Projects</a></li>
-<li><a href="#">Contact</a></li>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <!-- Hero -->
-
-<section class="hero">
+<section class="hero" id="home">
 
 <div class="hero-text">
-
 <h2>Hello, I'm <span>Ajay Kumar</span></h2>
 
 <p>
-Java Developer with experience in backend development and DevOps learning.
-Passionate about building scalable applications and automation.
+Java Developer with 1.5+ years experience in backend development.
+Currently focused on DevOps, Docker, CI/CD and AWS.
 </p>
 
 <a href="#" class="btn">Download Resume</a>
-
 </div>
 
 <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="250">
@@ -218,79 +211,61 @@ Passionate about building scalable applications and automation.
 </section>
 
 <!-- About -->
-
-<section class="about">
-
+<section id="about" class="about">
 <h2>About Me</h2>
-
 <p>
-I am a Java developer with 1.5 years of experience working with modern technologies.
-Currently learning Docker, AWS, CI/CD and DevOps practices.
-I love building projects and improving my development skills.
+I am a Java Developer with experience in backend systems and cloud basics.
+Currently learning Docker, Kubernetes, AWS and DevOps automation tools.
 </p>
-
 </section>
 
 <!-- Skills -->
-
-<section class="skills">
-
+<section id="skills">
 <h2>Skills</h2>
 
 <div class="skill-box">
-
 <div class="skill">Java</div>
 <div class="skill">Spring Boot</div>
 <div class="skill">Docker</div>
 <div class="skill">AWS</div>
 <div class="skill">Git</div>
-
 </div>
-
 </section>
 
 <!-- Projects -->
-
-<section class="projects">
-
+<section id="projects" class="projects">
 <h2>Projects</h2>
 
 <div class="project-grid">
 
 <div class="project">
 <h3>Docker Project</h3>
-<p>Deployed nginx container using docker compose.</p>
+<p>Deployed application using Docker Compose.</p>
 </div>
 
 <div class="project">
 <h3>AWS EC2 Setup</h3>
-<p>Installed Docker and deployed application.</p>
+<p>Configured EC2 and deployed backend service.</p>
 </div>
 
 <div class="project">
 <h3>CI/CD Pipeline</h3>
-<p>Automated build and deployment pipeline.</p>
+<p>Automated build and deployment using GitHub Actions.</p>
 </div>
 
 </div>
-
 </section>
 
 <!-- Contact -->
-
-<section class="contact">
-
+<section id="contact" class="contact">
 <h2>Contact Me</h2>
 
-<p>Email: ajay@example.com</p>
-<p>GitHub: github.com/ajay</p>
-
+<p>Email: <a href="mailto:ajay@example.com">ajay@example.com</a></p>
+<p>GitHub: <a href="#">github.com/ajay</a></p>
 </section>
 
 <footer>
-
-<p>© 2026 Ajay Kumar | Portfolio</p>
-
+<p>© 2026 Ajay Kumar | DevOps Portfolio</p>
 </footer>
 
 </body>
