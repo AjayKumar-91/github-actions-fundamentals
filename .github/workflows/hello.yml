@@ -12,8 +12,12 @@ on:
 # on:
 #   workflow_dispatch: 
 
+# there are jobs inside the workflow
 jobs:
+
+  # this is a job name
   greet:
+    # this is github runner, each job runs on a runner
     runs-on: ubuntu-latest
     steps:
 
