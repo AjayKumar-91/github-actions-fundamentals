@@ -1,0 +1,23 @@
+name: ajay
+location: gwalior
+dob: 10/03/1991
+
+tools:
+  - git
+  - github
+  - docker
+
+tools: [git, github, docker]  
+
+hobbies:
+  - teaching
+  - reading
+  - workout
+
+experiences:
+  devops:
+    linux: 2
+    docker: 2
+    kubernetes: 1.5
+
+  
